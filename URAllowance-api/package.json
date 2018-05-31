@@ -1,7 +1,7 @@
 {
-  "name": "koa2-api-boilerplate",
+  "name": "URAllowanceAPI",
   "version": "2.2.0",
-  "description": "Koa2 boilerplate covering essentials for APIs",
+  "description": "URAllowance covering essentials for APIs",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -21,15 +21,15 @@
     "passportjs",
     "apidoc"
   ],
-  "author": "Adrian Obelmejias <adrian@obel.me>",
+  "author": "Kannadhasan <ramarkanna@gmail.com>",
   "license": "MIT",
   "apidoc": {
-    "title": "koa2-api-boilerplate",
-    "url": "localhost:5000"
+    "title": "URAllowance",
+    "url": "localhost:3000"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/adrianObel/koa2-api-boilerplate"
+    "url": "https://github.com/ramarkanna/"
   },
   "dependencies": {
     "apidoc": "^0.16.1",
