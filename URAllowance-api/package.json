@@ -1,0 +1,72 @@
+{
+  "name": "koa2-api-boilerplate",
+  "version": "2.2.0",
+  "description": "Koa2 boilerplate covering essentials for APIs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "./node_modules/.bin/nodemon index.js",
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha test/**/*.spec.js --compilers js:babel-register --require babel-polyfill",
+    "lint": "eslint src/**/*.js",
+    "docs": "./node_modules/.bin/apidoc -i src/ -o docs"
+  },
+  "keywords": [
+    "koa2-api-boilerplate",
+    "api",
+    "koa",
+    "koa2",
+    "boilerplate",
+    "es6",
+    "mongoose",
+    "passportjs",
+    "apidoc"
+  ],
+  "author": "Adrian Obelmejias <adrian@obel.me>",
+  "license": "MIT",
+  "apidoc": {
+    "title": "koa2-api-boilerplate",
+    "url": "localhost:5000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adrianObel/koa2-api-boilerplate"
+  },
+  "dependencies": {
+    "apidoc": "^0.16.1",
+    "babel-core": "^6.5.1",
+    "babel-plugin-module-resolver": "^2.5.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.23.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-polyfill": "^6.5.0",
+    "bcrypt": "^0.8.5",
+    "glob": "^7.0.0",
+    "jsonwebtoken": "^7.1.9",
+    "koa": "^2.0.1",
+    "koa-bodyparser": "^3.0.0",
+    "koa-context-validator": "^0.3.0",
+    "koa-convert": "^1.2.0",
+    "koa-logger": "^2.0.0",
+    "koa-mount": "^2.0.0",
+    "koa-passport": "^2.0.1",
+    "koa-router": "^7.0.1",
+    "koa-static": "^2.0.0",
+    "lodash": "^4.16.6",
+    "mongoose": "^4.4.3",
+    "passport-local": "^1.0.0",
+    "winston": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.0",
+    "babel-register": "^6.5.1",
+    "chai": "^3.5.0",
+    "eslint": "^3.4.0",
+    "eslint-config-standard": "^6.0.0",
+    "eslint-plugin-promise": "^3.3.1",
+    "eslint-plugin-standard": "^2.0.0",
+    "faker": "^4.1.0",
+    "mocha": "^3.0.2",
+    "nodemon": "^1.8.1",
+    "sinon": "^1.17.7",
+    "supertest": "^2.0.0"
+  }
+}
