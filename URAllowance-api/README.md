@@ -13,11 +13,18 @@ This project uses follwoing APIs.
 ## Requirements
 * node __^7.6.0__
 * npm __^3.0.0__
+* g++ 
 
 ##Installation
 ```bash
 git clone https://github.com/URAllownace.git
 ```
+npm install
+
+Note:
+node-gyp install error follow the below link
+-------------
+https://www.npmjs.com/package/node-gyp
 
 ##Features
 * [koa2](https://github.com/koajs/koa/tree/v2.x)
