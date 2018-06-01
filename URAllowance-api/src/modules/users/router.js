@@ -15,7 +15,10 @@ export default [
           user: object({
             name: string().required(),
             username: string().required(),
-            password: string().required()
+            password: string().required(),
+            mobile: string().required(),
+            picture: string().required(),
+            role: string().required()
           }).required()
         })
       }),

@@ -6,7 +6,10 @@ import config from 'config'
 const User = new mongoose.Schema({
   name: { type: String },
   username: { type: String, required: true, unique: true },
-  password: { type: String, required: true }
+  password: { type: String, required: true },
+  mobile: { type: String, required: true },
+  picture: { type: String, required: true },
+  role: { type: String, required: true }
 })
 
 User.pre('save', function preSave (next) {
