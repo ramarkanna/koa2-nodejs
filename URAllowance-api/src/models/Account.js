@@ -1,12 +1,15 @@
 import mongoose from 'mongoose'
-import config from 'config'
+import CurrencyType from 'models/CurrencyType'
 
 /*
-	CurrencyType Schema
+Account Schema
 */
-const CurrnencySchema = mongoose.Schema = {
-	name: String,
-	symbol: String
+const AccountSchema = mongoose.Schema = {
+  userid: { type: String },
+  acc_number: { type: String, required: true },
+  curr_balance: { type: Number },
+  lock: { type: Boolean, required: true, default: false },
+  currencyType: [ CurrencyType ]
 }
 
-module.exports = mongoose.model("Currency", CurrnencySchema)
+module.exports = mongoose.model('Account', AccountSchema)
