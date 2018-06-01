@@ -44,7 +44,8 @@ export default [
     handlers: [
       validateSession,
       family.getFamily,
-      family.updateFamily
+      family.updateFamily,
+      fromStateToBody(['family'])
     ]
   },
   {

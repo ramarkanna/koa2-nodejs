@@ -12,10 +12,10 @@ export default [
     handlers: [
       validator({
         body: object({
-             name: string().required(),
-            urgency: string().required()
-          }).required()
-       }),
+          name: string().required(),
+          urgency: string().required()
+        }).required()
+      }),
       task.createTask
     ]
   },
@@ -41,13 +41,13 @@ export default [
     method: 'PUT',
     route: '/',
     handlers: [
-       validator({
+      validator({
         body: object({
-             name: string().required(),
-			 newName: string().required(),
-             urgency: string().required()
-          }).required()
-       }),
+          name: string().required(),
+          newName: string().required(),
+          urgency: string().required()
+        }).required()
+      }),
       task.updateTask
     ]
   },
@@ -56,7 +56,7 @@ export default [
     route: '/:id',
     handlers: [
       validateSession,
-      task.deleteTask,
+      task.deleteTask
     ]
   }
 ]

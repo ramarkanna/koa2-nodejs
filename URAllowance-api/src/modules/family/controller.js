@@ -42,16 +42,15 @@ exports.createFamily = async (ctx, next) => {
   }
 }
 
-exports.updateFamily = async (ctx, next) => {
-  const searchByName = {family_name: ctx.request.body.family_name}
-  const update = {family_name: ctx.request.body.Newfamilyname, family_pic: ctx.request.body.newFamilyPic, family_admin: ctx.request.body.newFamilyadmin}
-  const result = await Family.findOneAndUpdate(searchByName, update)
-  if (!result) {
-    ctx.throw('failed to update.')
-  } else {
-    console.log(result)
-    const family = await Family.findById(result.id)
-    ctx.body = {message: 'updated!', data: family}
+export async function updateFamily (ctx) {
+  const family = ctx.state.family
+
+  Object.assign(family, ctx.request.body.family)
+
+  await family.save()
+
+  ctx.body = {
+    family
   }
 }
 
