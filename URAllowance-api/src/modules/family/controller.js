@@ -64,4 +64,3 @@ exports.deleteFamily = async (ctx, next) => {
     ctx.body = {message: 'success!'}
   }
 }
-
