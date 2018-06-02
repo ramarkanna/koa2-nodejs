@@ -1,9 +1,9 @@
 import { validateSession } from 'utils/validators'
 import { fromStateToBody } from 'utils/response'
 import validator, { object, string } from 'koa-context-validator'
-import * as task from './controller'
+import * as smartcomment from './controller'
 
-export const baseUrl = '/tasks'
+export const baseUrl = '/smartcomment'
 
 export default [
   {
@@ -12,11 +12,14 @@ export default [
     handlers: [
       validator({
         body: object({
-          name: string().required(),
-          urgency: string().required()
+          taskid: string().required(),
+          comment: string().required(),
+          commentedby: string().required(),
+          commentdate: string().required()
+
         }).required()
       }),
-      task.createTask
+      smartcomment.createSmartComment
     ]
   },
   {
@@ -24,8 +27,8 @@ export default [
     route: '/',
     handlers: [
       validateSession,
-      task.getTasks,
-      fromStateToBody(['tasks'])
+      smartcomment.getSmartComment,
+      fromStateToBody(['smartcomment'])
     ]
   },
   {
@@ -33,8 +36,8 @@ export default [
     route: '/:id',
     handlers: [
       validateSession,
-      task.getTask,
-      fromStateToBody(['task'])
+      smartcomment.getSmartComment,
+      fromStateToBody(['smartcomment'])
     ]
   },
   {
@@ -43,12 +46,14 @@ export default [
     handlers: [
       validator({
         body: object({
-          name: string().required(),
-          newName: string().required(),
-          urgency: string().required()
+          taskid: string().required(),
+          comment: string().required(),
+          commentedby: string().required(),
+          commentdate: string().required()
+
         }).required()
       }),
-      task.updateTask
+      smartcomment.updateSmartComment
     ]
   },
   {
@@ -56,7 +61,7 @@ export default [
     route: '/:id',
     handlers: [
       validateSession,
-      task.deleteTask
+      smartcomment.deleteSmartComment
     ]
   }
 ]
