@@ -69,7 +69,7 @@ export default [
     route: '/:id',
     handlers: [
       validateSession,
-      smartcontract.deleteSmartontract
+      smartcontract.deleteSmartContract
     ]
   }
 ]
